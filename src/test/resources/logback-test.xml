@@ -5,6 +5,7 @@
     <!--
     <property name="pattern" value="%d{mm:ss} [%thread] [%-5level] %logger{16} - %msg - %logger%n" />
     -->
+    <property name="level.mongo" value="ALL" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -27,10 +28,7 @@
         <appender-ref ref="FILE" />
     </root>
 
-    <!--
     <logger name="org.springframework.data.mongodb" level="ALL" />
-    <logger name="com.mongodb" level="ALL" />
-    <logger name="com.danidemi.miserve" level="ALL" />
-    -->
+    <logger name="com.mongodb" level="${level.mongo}" />
 
 </configuration>
