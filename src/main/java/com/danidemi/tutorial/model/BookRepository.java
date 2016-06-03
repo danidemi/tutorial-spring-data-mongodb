@@ -1,10 +1,11 @@
 package com.danidemi.tutorial.model;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-@Repository
-public interface BookRepository {
+import java.math.BigInteger;
 
-    Book findByIsbn(String isbn);
+public interface BookRepository extends PagingAndSortingRepository<Book, BigInteger> {
+
+    public Book findByIsbn(String isbn);
 
 }

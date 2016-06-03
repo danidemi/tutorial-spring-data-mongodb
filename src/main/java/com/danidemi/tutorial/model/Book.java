@@ -1,10 +1,12 @@
 package com.danidemi.tutorial.model;
 
+import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.annotation.Id;
 import java.math.BigInteger;
 
 @Document(collection = "books")
+@TypeAlias("book")
 public class Book {
 
     @Id
